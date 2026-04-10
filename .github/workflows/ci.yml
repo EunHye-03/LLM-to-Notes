@@ -1,0 +1,24 @@
+name: Chrome Extension Build CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Zip extension files
+        run: zip -r extension-build.zip . -x "*.git*" -x ".github/*" -x ".gitignore"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LLM-to-Notion-Build
+          path: extension-build.zip
