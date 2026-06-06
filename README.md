@@ -1,3 +1,5 @@
+> **[Archived]** 더 이상 유지보수하지 않는 프로젝트입니다. AI 도구를 직접 활용하는 방식으로 전환하여 필요성이 없어졌습니다.
+
 # [Chrome Extension] LLM-to-Notes
 
 ### INTRO
